@@ -1,6 +1,6 @@
-package Que150;
+package Que150.ArrayStr;
 
-class Solution {
+class Solution88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         //1.双指针直接赋值给nums1，这起码是O(n*m)的复杂度了，其实不太好
         //2.直接赋值，然后排序，这是O(n+(m+n)log(m+n))的复杂度，相对来讲好一点
