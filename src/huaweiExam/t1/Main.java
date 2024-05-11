@@ -1,4 +1,4 @@
-package huaweiExam;
+package huaweiExam.t1;
 
 import java.util.HashMap;
 import java.util.Map;
