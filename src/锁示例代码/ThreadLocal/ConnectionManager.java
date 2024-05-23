@@ -33,7 +33,7 @@ public class ConnectionManager implements Runnable{
 
     @Override
     public void run(){
-        //getConnection();
+        getConnection();
         System.out.println("我是线程："+Thread.currentThread().getName());
         System.out.println("线程："+Thread.currentThread().getName()+" 结束！");
     }
