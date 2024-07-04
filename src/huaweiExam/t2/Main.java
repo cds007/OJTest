@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        //1.需要存储 键值对、键值对的使用次数、键值对的上一次使用时间。时间的话用每一行其实可以存储
+        //1.需要存储 键值对、键值对的使用数、键值对的上一次使用时间。时间的话用每一行其实可以存储次
         List<Cell> list = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         int cap = 0;

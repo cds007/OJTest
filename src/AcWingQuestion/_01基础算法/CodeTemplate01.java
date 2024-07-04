@@ -1,10 +1,11 @@
 package AcWingQuestion._01基础算法;
 
 import java.util.*;
-import java.io.*;
 
-public class CodeTemplate {
-
+public class CodeTemplate01 {
+    /**
+     * 快速排序和归并排序模板
+     */
 
     /**
      * 1.快速排序算法模板
