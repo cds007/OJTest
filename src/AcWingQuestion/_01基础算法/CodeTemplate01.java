@@ -27,7 +27,7 @@ public class CodeTemplate01 {
                 q[i] = q[j];
                 q[j] = temp;
             }
-        } // 第一轮结束之后，左边的都是小于x的，右边的都是大于等于x的。
+        } // 第一轮结束之后，左边的都是小于等于x的，右边的都是大于x的。
         quick_sort(q,l,j); // 这里当然也可以用 (q,l,i-1)，但是对应的，上面不能写 x = q[l]，因为可能会死循环，比如 [1,2]
         quick_sort(q,j+1,r);
     }

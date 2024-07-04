@@ -5,7 +5,7 @@ import java.io.*;
 public class CodeTemplate02 {
     /**
      * 整数二分查找的模板：这两个模板可以应对绝大对数整数二分问题
-     * 解释一下思想，二分的核心思想在于边界，将一个单调的序列依据(某种性质)分为两个区间，那么二分可以用来查找左区间的右端点和右区间的左端点。
+     * 解释一下思想，二分的核心思想在于!边界!，将一个单调的序列依据(某种性质)分为两个区间，那么二分可以用来查找左区间的右端点和右区间的左端点。
      * 查找右区间的左端点可以依据模板一，查找左区间的右端点可以依据模板二。
      */
     boolean check(int x) {/* ... */ return true;} // 检查x是否满足某种性质
@@ -23,6 +23,9 @@ public class CodeTemplate02 {
     //这个查找的是左区间的右端点，显然就是check为true的是左区间，为true时，l = mid。
     int bsearch_2(int l,int r){
         while (l<r){
+            /**
+             * 这个加1很重要
+             */
             int mid = l+r+1 >> 1;//这个需要注意，当 l = r-1时，如果mid不这样计算，那么会出现死循环的问题。
             if (check(mid)) l = mid;
             else r = mid -1;
@@ -31,6 +34,24 @@ public class CodeTemplate02 {
     }
 
     public static void main(String[] args) throws IOException{
+        /**
+         * 数的范围 :
+         * 给定一个按照升序排列的长度为 n 的整数数组，以及 q个查询。
+         * 对于每个查询，返回一个元素 k 的起始位置和终止位置（位置从 0 开始计数）。
+         * 如果数组中不存在该元素，则返回 -1 -1。
+         */
+        /**
+         * 输入样例：
+         * 6 3
+         * 1 2 2 3 3 4
+         * 3
+         * 4
+         * 5
+         * 输出样例：
+         * 3 4
+         * 5 5
+         * -1 -1
+         */
         //用BufferedReader要比Scanner快了1秒钟。
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String[] s1 = in.readLine().split(" ");
