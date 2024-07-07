@@ -40,7 +40,7 @@ public class Acwing786 {
     }
 
     /**
-     * 题解版本 快100ms
+     * 题解版本 快100ms 时间复杂度是2n，n+n/2+n/4
      * @param arr
      * @param left
      * @param right
@@ -48,7 +48,7 @@ public class Acwing786 {
      * @return
      */
     public static int quickSort(int[] arr,int left,int right,int k){
-        if(left >= right) return left;
+        if(left >= right) return left; //k永远在l和r区间内
         int x = arr[(left + right) / 2],i = left - 1,j = right + 1;
         while(i < j){
             while(arr[++i] < x);
@@ -60,8 +60,8 @@ public class Acwing786 {
             }
         }
         int sl = j - left + 1;
-        if(k <= sl) return quickSort(arr,left,j,k);
-        else return quickSort(arr,j+1,right,(k-sl));
+        if(k <= sl) return quickSort(arr,left,j,k); //细节范围是left，j
+        else return quickSort(arr,j+1,right,(k-sl)); //这个是细节k-sl，因为k不是绝对的，k是相对位置了，当左端点变成j+1，k相对于j+1就是k-sl
     }
 
     public static void main(String[] args) throws IOException {
